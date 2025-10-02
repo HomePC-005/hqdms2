@@ -1,26 +1,3 @@
-=+= Apache Rebuild
-
-# Remove Build Folder
-cd hqdms2/server
-rm -rf build
-# Remove Apache base folder
-sudo rm -rf /var/www/html/*
-# Rebuild
-npm run build
-# Copy to Apache base folder
-cp -r build/* /var/www/html/
-
-
-=+= Common Startup Script
-
-# Start Apache manually
-sudo systemctl start apache2
-
-# Start pm2 backend server manually
-cd hqdms2/server
-pm2 start index.js --name "hqdms-backend"
-
-
 # HQDMS - Hospital Quota Drug Management System
 
 A comprehensive web-based system for managing hospital drug quotas, patient enrollments, and prescription tracking. Built with React frontend and Node.js/Express backend with PostgreSQL database.
@@ -514,5 +491,27 @@ For support and questions:
 - Check the troubleshooting section
 
 ---
+
+# Remove Build Folder
+cd hqdms2/server
+rm -rf build
+# Remove Apache base folder
+sudo rm -rf /var/www/html/*
+# Rebuild
+npm run build
+# Copy to Apache base folder
+cp -r build/* /var/www/html/
+
+
+=+= Common Startup Script
+
+# Start Apache manually
+sudo systemctl start apache2
+
+# Start pm2 backend server manually
+cd hqdms2/server
+pm2 start index.js --name "hqdms-backend"
+
+
 
 **HQDMS v1.0.0** - Hospital Quota Drug Management System
