@@ -1,0 +1,39 @@
+{
+  "name": "hqdms2",
+  "version": "1.0.0",
+  "description": "Hospital Quota Drug Management System",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install",
+    "network": "node get-ip.js"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "hospital",
+    "pharmacy",
+    "quota",
+    "drug",
+    "management"
+  ],
+  "author": "Hospital Segamat",
+  "license": "MIT"
+}
